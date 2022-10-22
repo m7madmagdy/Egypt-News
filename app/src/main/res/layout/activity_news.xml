@@ -12,13 +12,9 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-<<<<<<< Updated upstream
-            android:layout_height="wrap_content">
-=======
             android:layout_height="wrap_content"
             android:background="#2688D6"
             app:layout_scrollFlags="scroll|enterAlways">
->>>>>>> Stashed changes
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
