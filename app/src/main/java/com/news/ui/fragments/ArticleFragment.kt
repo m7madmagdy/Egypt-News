@@ -6,15 +6,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.news.R
+import com.news.databinding.FragmentArticleBinding
+import com.news.databinding.FragmentSearchNewsBinding
+import com.news.ui.NewsActivity
+import com.news.ui.viewModels.NewsViewModel
 
 class ArticleFragment : Fragment() {
+    private var _binding: FragmentArticleBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var viewModel: NewsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_article, container, false)
+    ): View {
+        _binding = FragmentArticleBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = (activity as NewsActivity).newsViewModel
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
