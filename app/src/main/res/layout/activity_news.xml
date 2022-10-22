@@ -12,24 +12,25 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#3F51B5"
+            app:layout_scrollFlags="scroll|enterAlways">
 
-            <com.google.android.material.appbar.MaterialToolbar
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/news_app"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
-            </com.google.android.material.appbar.MaterialToolbar>
-
+            </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
