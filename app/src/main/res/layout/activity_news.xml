@@ -26,7 +26,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/news_app"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_scrollFlags="scroll|exitUntilCollapsed" />
 
@@ -50,7 +50,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:itemIconSize="25dp"
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
