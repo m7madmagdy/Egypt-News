@@ -5,6 +5,7 @@ import com.news.util.Constants.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
+import kotlin.random.Random
 
 interface NewsAPI {
     @GET("v2/top-headlines")

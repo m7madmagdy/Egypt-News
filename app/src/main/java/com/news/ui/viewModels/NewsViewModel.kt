@@ -18,7 +18,7 @@ class NewsViewModel(private val newsRepository: NewsRepository) : ViewModel() {
 
     private fun getBreakingNews() = viewModelScope.launch {
         breakingNews.postValue(Resource.Loading())
-        val response = newsRepository.getBreakingNews("eg", 2)
+        val response = newsRepository.getBreakingNews("eg", randomPageNumber())
         breakingNews.postValue(handleBreakingNewsResponse(response))
     }
 
@@ -29,5 +29,9 @@ class NewsViewModel(private val newsRepository: NewsRepository) : ViewModel() {
             }
         }
         return Resource.Error(response.message())
+    }
+
+    private fun randomPageNumber(): Int {
+        return (1..2).random()
     }
 }

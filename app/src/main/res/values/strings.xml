@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">News App</string>
+    <string name="app_name">Egypt News</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_news_fragment">News fragment</string>
     <string name="hello_saved_news_fragment">Favorite Fragment</string>
