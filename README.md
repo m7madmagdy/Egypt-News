@@ -1,5 +1,6 @@
 # Egypt-News
 Show Top News of Egypt
+Using News API: <a href="https://newsapi.org/">News API</a>
 
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.6.10-blue.svg)](http://kotlinlang.org/)
 [![Gradle](https://img.shields.io/badge/gradle-7.1.2-blue.svg)](https://lv.binarybabel.org/catalog/gradle/latest)
