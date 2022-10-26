@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.news.R
 import com.news.databinding.FragmentBreakingNewsBinding
 import com.news.ui.NewsActivity
 import com.news.ui.adapters.NewsAdapter
@@ -63,7 +62,7 @@ class BreakingNewsFragment : Fragment() {
     }
 
     private fun setUpRecyclerView() {
-        newsAdapter = NewsAdapter(requireContext())
+        newsAdapter = NewsAdapter()
         binding.rvBreakingNews.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(requireContext())

@@ -12,6 +12,7 @@ import com.news.db.ArticleDatabase
 import com.news.ui.providerFactory.NewsViewModelProviderFactory
 import com.news.ui.repository.NewsRepository
 import com.news.ui.viewModels.NewsViewModel
+import org.json.JSONObject
 
 class NewsActivity : AppCompatActivity() {
     private var _binding: ActivityNewsBinding? = null
@@ -26,7 +27,7 @@ class NewsActivity : AppCompatActivity() {
         setUpViewModel()
     }
 
-    private fun setUpViewModel(){
+    private fun setUpViewModel() {
         val newsRepository = NewsRepository(ArticleDatabase(this))
         val newsViewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
         newsViewModel =

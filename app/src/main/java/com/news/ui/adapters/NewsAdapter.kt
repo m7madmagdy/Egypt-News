@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.news.R
 import com.news.databinding.ItemArticlePreviewBinding
 import com.news.models.Article
 
-class NewsAdapter(private val context: Context) :
-    RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
+class NewsAdapter: RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
     inner class ArticleViewHolder(val binding: ItemArticlePreviewBinding) :
         RecyclerView.ViewHolder(binding.root)
 
@@ -41,7 +41,7 @@ class NewsAdapter(private val context: Context) :
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         val article = differ.currentList[position]
         holder.binding.apply {
-            Glide.with(context)
+            Glide.with(root.context)
                 .load(article.urlToImage)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(ivArticleImage)
@@ -50,8 +50,9 @@ class NewsAdapter(private val context: Context) :
             tvTitle.text = article.title
             tvDescription.text = article.description
             tvPublishedAt.text = article.publishedAt
+
             root.setOnClickListener {
-                onItemClickListener?.let { it(article) }
+                Toast.makeText(root.context, article.source.name, Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -60,9 +61,9 @@ class NewsAdapter(private val context: Context) :
         return differ.currentList.size
     }
 
-    private var onItemClickListener: ((Article) -> Unit)? = null
-
-    fun setOnItemClickListener(listener: (Article) -> Unit) {
-        onItemClickListener = listener
-    }
+//    private var onItemClickListener: ((Article) -> Unit)? = null
+//
+//    fun setOnItemClickListener(listener: (Article) -> Unit) {
+//        onItemClickListener = listener
+//    }
 }
