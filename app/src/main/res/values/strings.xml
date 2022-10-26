@@ -11,5 +11,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="news_app">News App</string>
     <string name="articleimage">articleImage</string>
+    <string name="search_here">ابحث هنا</string>
 
 </resources>
