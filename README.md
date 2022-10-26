@@ -7,3 +7,5 @@ Using: <a href="https://newsapi.org/">News API</a>
 [![API](https://img.shields.io/badge/API-21%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=21)
 
 <img src="https://m7madmagdy.github.io/pages/newsPage.png" width="220"> 
+<img src="https://m7madmagdy.github.io/pages/searchNews.png" width="220"> 
+
