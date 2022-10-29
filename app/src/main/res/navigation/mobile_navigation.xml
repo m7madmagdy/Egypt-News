@@ -18,7 +18,7 @@
         android:id="@+id/savedNewsFragment"
         android:name="com.news.ui.fragments.SavedNewsFragment"
         android:label="fragment_saved_news"
-        tools:layout="@layout/fragment_saved_news" >
+        tools:layout="@layout/fragment_favorite_news" >
         <action
             android:id="@+id/action_savedNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />

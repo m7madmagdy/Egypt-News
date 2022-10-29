@@ -5,39 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/search_text"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#DCF0FF"
-        android:padding="10dp"
-        android:hint="@string/search_here"
-        android:imeOptions="actionDone"
-        android:inputType="text"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="end|center"
+        android:layout_margin="10dp"
+        android:background="#E2F2FF"
+        app:endIconDrawable="@drawable/ic_baseline_clear_24"
+        app:endIconMode="clear_text"
+        app:endIconTint="#CD1C0F"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_search_news"
+            android:drawablePadding="10dp"
+            android:gravity="right|center"
+            android:hint="@string/search_here"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            app:drawableTint="@color/black" />
+
+        <requestFocus />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:visibility="gone"
         android:background="@android:color/transparent"
         android:indeterminate="true"
+        android:visibility="gone"
         app:indicatorColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/search_text" />
+        app:layout_constraintTop_toBottomOf="@+id/edtLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSearchNews"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         android:clipToPadding="false"
         android:paddingBottom="50dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
