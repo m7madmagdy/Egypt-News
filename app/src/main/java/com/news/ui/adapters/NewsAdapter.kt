@@ -44,6 +44,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
         holder.binding.apply {
             Glide.with(root.context)
                 .load(article.urlToImage)
+                .placeholder(R.drawable.ic_baseline_downloading_24)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(ivArticleImage)
 

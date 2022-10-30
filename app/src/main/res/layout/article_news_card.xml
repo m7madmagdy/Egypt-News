@@ -10,8 +10,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tvTitle"
@@ -26,7 +28,7 @@
         <ImageView
             android:id="@+id/ivArticleImage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:contentDescription="@string/articleimage"
             android:padding="6dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -89,17 +91,18 @@
                 android:layout_gravity="bottom"
                 android:background="#6E6E6E" />
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:layout_marginTop="10dp"
+                android:layout_gravity="bottom"
                 android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/save_news"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="end"
                     android:button="@null"
                     android:drawableEnd="@drawable/saved_news_selector"
@@ -112,16 +115,19 @@
                 <ImageButton
                     android:id="@+id/share_news"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="end"
                     android:background="@android:color/transparent"
                     android:contentDescription="@string/saved_news"
+                    android:minWidth="48dp"
                     android:padding="10dp"
                     android:src="@drawable/ic_baseline_share_24"
                     app:tint="@color/white" />
 
             </LinearLayout>
         </LinearLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
