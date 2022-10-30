@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainBgDark"
     tools:context=".ui.fragments.SavedNewsFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSavedNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:text="@string/hello_saved_news_fragment" />
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        tools:listitem="@layout/article_news_card" />
 
 </FrameLayout>

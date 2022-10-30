@@ -103,7 +103,7 @@
                     android:layout_gravity="end"
                     android:button="@null"
                     android:drawableEnd="@drawable/saved_news_selector"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginEnd="10dp"
                     android:paddingEnd="10dp"
                     android:paddingStart="10dp"
                     android:background="@android:color/transparent"
@@ -116,7 +116,7 @@
                     android:layout_gravity="end"
                     android:background="@android:color/transparent"
                     android:contentDescription="@string/saved_news"
-                    android:padding="4dp"
+                    android:padding="10dp"
                     android:src="@drawable/ic_baseline_share_24"
                     app:tint="@color/white" />
 

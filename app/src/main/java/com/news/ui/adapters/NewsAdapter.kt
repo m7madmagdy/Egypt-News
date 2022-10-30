@@ -76,7 +76,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
         Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show()
     }
 
-
     private fun shareNews(context: Context, article: Article) {
         val intent = Intent().apply {
             action = Intent.ACTION_SEND
