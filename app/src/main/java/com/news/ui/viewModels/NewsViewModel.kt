@@ -19,13 +19,13 @@ class NewsViewModel(private val newsRepository: NewsRepository) : ViewModel() {
 
     private fun getBreakingNews() = viewModelScope.launch {
         breakingNews.postValue(Resource.Loading())
-        val response = newsRepository.getBreakingNews("eg", randomPageNumber())
+        val response = newsRepository.getBreakingNews("eg", 1)
         breakingNews.postValue(handleBreakingNewsResponse(response))
     }
 
     fun searchNews(searchQuery: String) = viewModelScope.launch {
         searchNews.postValue(Resource.Loading())
-        val response = newsRepository.searchNews(searchQuery, randomPageNumber())
+        val response = newsRepository.searchNews(searchQuery, 1)
         searchNews.postValue(handleSearchNewsResponse(response))
     }
 
@@ -45,9 +45,5 @@ class NewsViewModel(private val newsRepository: NewsRepository) : ViewModel() {
             }
         }
         return Resource.Error(response.message())
-    }
-
-    private fun randomPageNumber(): Int {
-        return (1..2).random()
     }
 }

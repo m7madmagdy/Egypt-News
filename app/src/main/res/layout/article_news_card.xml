@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/mainBg"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:padding="10dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/tvTitle"
@@ -28,8 +27,8 @@
             android:id="@+id/ivArticleImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="6dp"
             android:contentDescription="@string/articleimage"
+            android:padding="6dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle"
@@ -40,8 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:textColor="#151915"
             android:padding="6dp"
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,16 +48,19 @@
             tools:text="Description" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescription">
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+            tools:layout_editor_absoluteX="10dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -81,6 +83,45 @@
                     app:layout_constraintStart_toStartOf="parent"
                     tools:text="Source" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#6E6E6E" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/save_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/saved_news_selector"
+                    android:layout_marginEnd="20dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/saved_news"/>
+
+                <ImageButton
+                    android:id="@+id/share_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/saved_news"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_baseline_share_24"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </com.google.android.material.card.MaterialCardView>

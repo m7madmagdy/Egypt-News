@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/mainBg">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -13,7 +13,7 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#2688D6"
+            android:background="@color/mainBgDark"
             app:layout_scrollFlags="scroll|enterAlways">
 
             <com.google.android.material.appbar.MaterialToolbar
@@ -49,7 +49,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:saveEnabled="true"
         app:itemIconSize="25dp"
+        app:elevation="20dp"
+        app:itemIconTint="@color/white"
+        android:background="@color/mainBgDark"
+        app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
